@@ -12,8 +12,8 @@
 Т.е. система просто загружалась до аутентификации в обычном режиме.  
 Это вылечилось обрезанием строки по самый ro. Ниже изначальное состояние строки:  
 ```
-linux16 /boot/vmlinuz-3.10.0-957.12.2.el7.x86_64 root=UUID=8ac075e3-1124-4bb6-bef7-a6811bf8b870 ro /
-no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop /
+linux16 /boot/vmlinuz-3.10.0-957.12.2.el7.x86_64 root=UUID=8ac075e3-1124-4bb6-bef7-a6811bf8b870 ro \
+no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 elevator=noop \
 crashkernel=auto LANG=en_US.UTF-8
 ``` 
 Похоже, что дело в записях console, но на 100% не уверен.
