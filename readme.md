@@ -57,7 +57,7 @@ mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
 
 И убеждаемся, что все нормально.
 
-> VG       #PV #LV #SN Attr   VSize   VFree
+> VG       #PV #LV #SN Attr   VSize   VFree  
 > OtusRoot   1   2   0 wz--n- <38.97g    0
   
  
