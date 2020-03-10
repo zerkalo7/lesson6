@@ -48,3 +48,22 @@ vgrename VolGroup00 OtusRoot
 
 Правим /etc/fstab, /etc/default/grub и /boot/grub2/grub.cfg (заменяем старое название на новое).
 Пересоздаем intird c новым названием.
+```
+mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+```
+  
+После перезагрузки выполняем 
+`<vgs>`  
+
+И убеждаемся, что все нормально.
+
+> VG       #PV #LV #SN Attr   VSize   VFree
+> OtusRoot   1   2   0 wz--n- <38.97g    0
+  
+ 
+### Задание 3. Добавить модуль в initrd
+
+Переходим в папку со скриптами модулей и создаем там папку
+```
+cd /usr/lib/dracut/modules.d/
+ 
